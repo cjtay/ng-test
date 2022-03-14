@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 [ngClass]="{ green: toDisplay }">directives component</h2>
+  <h4>ngIf</h4>
+  <div *ngIf="toDisplay">
+    <p>{{ info }}</p>
+  </div>
+  <div *ngIf="!toDisplay">
+    <p>nothing to display</p>
+  </div>
+
+  <button (click)="onChange()" class="button is-primary">Display</button>
+  <h4>List of posts</h4>
+
+  <p *ngFor="let post of posts; let i = index">
+    <span [ngClass]="{ green: i > 1 }">
+      name: {{ post.name }} id:{{ post.id }} index:{{ i }}
+    </span>
+  </p>
+</div>

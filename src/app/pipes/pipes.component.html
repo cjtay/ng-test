@@ -1,0 +1,26 @@
+<div class="container">
+  <p>Pipes works!</p>
+  <p>Piped value: {{ title | titlecase }}</p>
+  <p>Unpiped value: {{ title }}</p>
+  <p>Date: {{ currentDate }}</p>
+  <p>Date (piped): {{ currentDate | date: "shortDate" }}</p>
+  <br />
+  <p>UTC Date: {{ utcDate }}</p>
+  <p>UTC Date (piped): {{ utcDate | date: "medium" }}</p>
+  <br />
+  <p>UTC Date 2: {{ utcDate2 }}</p>
+  <p>UTC Date 2 (piped): {{ utcDate2 | date: "medium" }}</p>
+  <br />
+  <p>Amount: {{ amount }}</p>
+  <p>
+    Amount SGD symbol (piped): {{ amount | currency: "SGD":"symbol":"1.2" }}
+  </p>
+  <p>
+    Amount SGD symbol-narrow (piped):
+    {{ amount | currency: "SGD":"symbol-narrow":"1.2" }}
+  </p>
+  <p>
+    Amount SGD no decimals (piped):
+    {{ amount | currency: "SGD":"symbol":"1.0-0" }}
+  </p>
+</div>

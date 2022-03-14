@@ -1,0 +1,23 @@
+<div class="container content rounded-xl">
+  <h2>content component</h2>
+  <p>{{ info1 }}</p>
+  <p>{{ getInfo() }}</p>
+  <p>Info 3: {{ info3 }}</p>
+  <button (click)="changeInfo()" class="button is-warning">
+    Change Info 3
+  </button>
+  <!-- 1-way databinding -->
+  <h4>1-way data binding using string interpolation</h4>
+  <input type="text" (input)="enterInfo($event)" />
+  <p>entered info: {{ info4 }}</p>
+
+  <!-- 2-way databinding -->
+  <div class="p-4 text-white rounded bg-swa-1">
+    <h4>2-way data binding using ngModel</h4>
+    <input (input)="enterInfo2($event)" [(ngModel)]="info5" />
+    <p>{{ info5 }}</p>
+  </div>
+
+  <!-- console log info  -->
+  <button (click)="consoleInfo()" class="button is-info">Console Log</button>
+</div>
