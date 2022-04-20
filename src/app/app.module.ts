@@ -19,6 +19,8 @@ import { SigninComponent } from './signin/signin.component';
 import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { StandaloneComponent } from './standalone/standalone.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { StandaloneComponent } from './standalone/standalone.component';
     ReactiveFormsModule,
     AuthModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
